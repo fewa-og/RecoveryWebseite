@@ -812,5 +812,19 @@ body.fullscreen-active .presentation-section .pres-trigger-container {
     margin: 0;
 }
 
+/* Presentation Fragment Animations */
+.fragment {
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    pointer-events: none;
+}
+
+.fragment.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
 
 

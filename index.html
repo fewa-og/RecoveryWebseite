@@ -329,20 +329,21 @@
                 <!-- Slide 1: Startfolie (Titel) -->
                 <div class="slide-content active">
                     <div class="slide-header">
-                        <span class="slide-tag icon-gold" style="background: rgba(212, 175, 55, 0.1);">Titel-Folie</span>
-                        <span class="slide-number">Folie 1 von 8</span>
+                        <span class="slide-tag icon-gold" style="background: rgba(212, 175, 55, 0.1);">M231 Fallstudie</span>
+                        <span class="slide-number">Folie 1 von 11</span>
                     </div>
                     <div class="slide-grid">
                         <div class="slide-text">
-                            <h3 class="slide-title">M231 Fallstudie: Datenlöschung &amp; Website-Recht</h3>
+                            <h3 class="slide-title">Incident Recovery &amp; Website-Recht</h3>
                             <p>Präsentiert von <strong>Gruppe G</strong> für das Modul 231 an der TBZ.</p>
                             <p style="font-size: 0.95rem; color: var(--gold); font-weight: 500; font-style: italic; border-left: 2px solid var(--gold); padding-left: 12px; margin: 1.5rem 0;">
-                                "OK gooners do you have problems with ARJ? - Yes we do – yeyyy!!"
+                                Vorfallsbericht und rechtliche Risikoanalyse der zentralen Datenbankinfrastruktur.
                             </p>
                             <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.8;">
                                 <strong>Incident Lead:</strong> Lele<br>
+                                <strong>Recovery Engineer:</strong> [Name]<br>
                                 <strong>Legal &amp; Comm. Officer:</strong> Fala<br>
-                                <strong>Muttergesellschaft:</strong> Günther &amp; Guhner AG, Zug
+                                <strong>Moderator / Q&A:</strong> [Name]
                             </p>
                         </div>
                         <div class="slide-visual">
@@ -355,32 +356,33 @@
                     </div>
                 </div>
 
-                <!-- Slide 2: Der Vorfall (Incident summary & affected systems) -->
+                <!-- Slide 2: Der Vorfall (Incident summary) -->
                 <div class="slide-content">
                     <div class="slide-header">
-                        <span class="slide-tag icon-red" style="background: rgba(244, 63, 94, 0.1);">Vorfalls-Summary</span>
-                        <span class="slide-number">Folie 2 von 8</span>
+                        <span class="slide-tag icon-red" style="background: rgba(244, 63, 94, 0.1);">IT-Vorfall</span>
+                        <span class="slide-number">Folie 2 von 11</span>
                     </div>
                     <div class="slide-grid">
                         <div class="slide-text">
-                            <h3 class="slide-title">Datenbank-Crash &amp; Kritikalität</h3>
-                            <p><strong>Incident Lead Lele:</strong> Ein fehlerhaftes Skript korrumpierte die zentrale PostgreSQL-Datenbank. Das wöchentliche Backup fehlt im Backup-System (nur statische Web-Files vorhanden). Ausfall aller 9 Tochtergesellschaften.</p>
-                            <ul class="slide-list" style="font-size: 0.85rem; line-height: 1.4;">
+                            <h3 class="slide-title">Datenbank-Crash &amp; Backup-Fehler</h3>
+                            <p><strong>Incident Lead Lele:</strong> Ein fehlerhaftes Skript während eines System-Updates korrumpierte die PostgreSQL-Datenbank der Günther &amp; Guhner AG. Das wöchentliche Backup enthielt fälschlicherweise nur statische Webdateien.</p>
+                            <ul class="slide-list" style="font-size: 0.85rem; line-height: 1.55;">
                                 <li>
                                     <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="icon-red"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
-                                    <span><strong>Systeme:</strong> Ausfall von User-Wallets, Registrierungen, Wetthistorie und Compliance-Logs.</span>
+                                    <span><strong>Unvollständiges Backup (DB fehlt):</strong> Der Restore brachte eine leere, nicht funktionierende Web-App zurück, da die eigentliche Datenbank und kritische Configs nicht gesichert wurden.</span>
                                 </li>
                                 <li>
-                                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="icon-red"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                                    <span><strong>Kritikalität:</strong> Reputationsschaden (Exit-Scam Verdacht), finanzieller Ruin, Lizenzentzug (MGA/ESBK) und operativer Stillstand.</span>
+                                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="icon-red"><path stroke-linecap="round" stroke-linejoin="round" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"/></svg>
+                                    <span><strong>Systemstatus:</strong> Alle 9 internationalen Casino- und Sportwetten-Plattformen mussten aus Sicherheitsgründen sofort offline genommen werden (Totalausfall).</span>
                                 </li>
                             </ul>
                         </div>
                         <div class="slide-visual">
                             <svg width="220" height="220" viewBox="0 0 100 100">
                                 <circle cx="50" cy="50" r="45" fill="none" stroke="rgba(244, 63, 94, 0.2)" stroke-width="3"/>
-                                <path d="M30,35 L70,35 C70,35 75,45 50,45 C25,45 30,35 30,35" fill="#f43f5e"/>
-                                <rect x="30" y="48" width="40" height="15" rx="3" fill="#f43f5e" opacity="0.8"/>
+                                <rect x="30" y="30" width="40" height="10" rx="2" fill="#f43f5e" opacity="0.9"/>
+                                <rect x="30" y="45" width="40" height="10" rx="2" fill="#f43f5e" opacity="0.6"/>
+                                <rect x="30" y="60" width="40" height="10" rx="2" fill="#f43f5e" opacity="0.3"/>
                                 <line x1="20" y1="20" x2="80" y2="80" stroke="#f43f5e" stroke-width="5" stroke-linecap="round"/>
                                 <line x1="80" y1="20" x2="20" y2="80" stroke="#f43f5e" stroke-width="5" stroke-linecap="round"/>
                             </svg>
@@ -388,24 +390,56 @@
                     </div>
                 </div>
 
-                <!-- Slide 3: RPO & RTO Metriken -->
+                <!-- Slide 3: Die geschäftliche Kritikalität -->
                 <div class="slide-content">
                     <div class="slide-header">
-                        <span class="slide-tag icon-blue" style="background: rgba(99, 102, 241, 0.1);">RPO / RTO</span>
-                        <span class="slide-number">Folie 3 von 8</span>
+                        <span class="slide-tag icon-red" style="background: rgba(239, 68, 68, 0.1);">Kritikalität</span>
+                        <span class="slide-number">Folie 3 von 11</span>
                     </div>
                     <div class="slide-grid">
                         <div class="slide-text">
-                            <h3 class="slide-title">RPO &amp; RTO Metriken</h3>
-                            <p>Unsere RPO- und RTO-Grenzwerte wurden durch den Ausfall extrem überschritten:</p>
-                            <ul class="slide-list">
+                            <h3 class="slide-title">Warum der Vorfall existenzbedrohend ist</h3>
+                            <p>Glücksspielplattformen basieren auf absolutem Vertrauen. Dieser Ausfall bedroht das gesamte Überleben des Konzerns:</p>
+                            <ul class="slide-list" style="font-size: 0.85rem; line-height: 1.55;">
+                                <li>
+                                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="icon-red"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+                                    <span><strong>Verlust der Spiellizenzen:</strong> Aufsichtsbehörden wie die ESBK (Schweiz) oder die MGA verlangen Lückenlosigkeit. Fehlen Spieldaten und Kontostände, wird die Konzession entzogen.</span>
+                                </li>
+                                <li>
+                                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="icon-red"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                    <span><strong>Massive Haftungs- &amp; Finanzrisiken:</strong> Spieler fordern Guthaben zurück. Zahlen wir blind aus, kommt es zu Betrug. Verweigern wir es, drohen Klagewellen und Exit-Scam-Vorwürfe.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="slide-visual">
+                            <svg width="220" height="220" viewBox="0 0 100 100">
+                                <path d="M50,15 L90,35 L90,65 L50,85 L10,65 L10,35 Z" fill="none" stroke="#ef4444" stroke-width="3"/>
+                                <path d="M30,50 L70,50" stroke="#ef4444" stroke-width="4"/>
+                                <circle cx="50" cy="50" r="15" fill="none" stroke="#ef4444" stroke-width="3"/>
+                                <text x="50" y="55" font-family="Outfit" font-size="16" fill="#ef4444" font-weight="bold" text-anchor="middle">!</text>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 4: RPO & RTO Metriken -->
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <span class="slide-tag icon-blue" style="background: rgba(99, 102, 241, 0.1);">Ziele vs. Realität</span>
+                        <span class="slide-number">Folie 4 von 11</span>
+                    </div>
+                    <div class="slide-grid">
+                        <div class="slide-text">
+                            <h3 class="slide-title">Recovery Point &amp; Time Objectives</h3>
+                            <p>Unsere RPO- und RTO-Grenzwerte wurden durch den Ausfall extrem verletzt:</p>
+                            <ul class="slide-list" style="font-size: 0.85rem; line-height: 1.55;">
                                 <li>
                                     <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="icon-blue"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                                    <span><strong>RPO (Soll: Minuten):</strong> Aufgrund des Ausfalls können wir nur ein DB-Backup nutzen, das **mehrere Wochen alt** ist (massiver Datenverlust).</span>
+                                    <span><strong>RPO (Soll: Minuten):</strong> Da kein valides Datenbank-Backup existiert, erleiden wir einen nominellen Datenverlust von mehreren Wochen (Wiederherstellung aus Rohdaten nötig).</span>
                                 </li>
                                 <li>
                                     <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="icon-blue"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-                                    <span><strong>RTO (Soll: Minimal):</strong> Die Downtime ist kritisch. Wegen der manuellen Rekonstruktion aus Caches/Logs rechnen wir mit **1-2 Tagen**.</span>
+                                    <span><strong>RTO (Soll: 1 Std.):</strong> Wegen der aufwendigen manuellen Rekonstruktion aus Redis-Caches, Webserver-Logs und API-Logs beträgt die tatsächliche Downtime **1 bis 2 Tage**.</span>
                                 </li>
                             </ul>
                         </div>
@@ -419,62 +453,63 @@
                     </div>
                 </div>
 
-                <!-- Slide 4: Recovery Steps (1-3) -->
+                <!-- Slide 5: Recovery Steps (1-3) -->
                 <div class="slide-content">
                     <div class="slide-header">
-                        <span class="slide-tag icon-gold" style="background: rgba(212, 175, 55, 0.1);">Wiederherstellung (Teil 1)</span>
-                        <span class="slide-number">Folie 4 von 8</span>
+                        <span class="slide-tag icon-gold" style="background: rgba(212, 175, 55, 0.1);">Wiederherstellung: Phase 1</span>
+                        <span class="slide-number">Folie 5 von 11</span>
                     </div>
                     <div class="slide-grid">
                         <div class="slide-text">
-                            <h3 class="slide-title">Schritte 1 bis 3 (Plan)</h3>
-                            <p><strong>Recovery Engineer:</strong> Strukturierter Wiederaufbau des Systems und Schema-Rekonstruktion:</p>
-                            <ul class="slide-list" style="font-size: 0.85rem; line-height: 1.45;">
+                            <h3 class="slide-title">Recovery-Schritte 1 bis 3</h3>
+                            <p><strong>Recovery Engineer:</strong> Phase 1 fokussiert sich auf die Lokalisierung und Strukturierung geretteter Datenfragmente:</p>
+                            <ul class="slide-list" style="font-size: 0.85rem; line-height: 1.55;">
                                 <li>
                                     <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="icon-gold"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
-                                    <span><strong>1. Caches &amp; Devs:</strong> Versteckte Snapshots/Backups suchen. Redis-Caches &amp; PostgreSQL-Logs nach Schemadaten prüfen. Lokale DB-Kopien bei Programmierer:innen abfragen.</span>
+                                    <span><strong>1. Suche &amp; Cache-Sicherung:</strong> Extrahieren temporärer User-Sessions aus Redis, Auswerten der Write-Ahead Logs (WAL) und Abgleich lokaler Entwickler-DBs.</span>
                                 </li>
                                 <li>
                                     <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="icon-gold"><path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
-                                    <span><strong>2. Datenbankschema (EF):</strong> Rekonstruktion aus Backend-Code, SQL-Skripten, ERDs und dem **Entity Framework Database Context &amp; Migrations**.</span>
+                                    <span><strong>2. DB-Schema-Rekonstruktion:</strong> Automatisierte Neuerzeugung des Datenbankschemas über die **Entity Framework Migrations** und den Database Context der Anwendung.</span>
                                 </li>
                                 <li>
-                                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="icon-gold"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
-                                    <span><strong>3. Datenwiederherstellung:</strong> Caches, PostgreSQL WALs (Write-Ahead Logs) auswerten. User zur Re-Registrierung auffordern zur Profilrettung.</span>
+                                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="icon-gold"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                                    <span><strong>3. Finanz- und API-Datenabgleich:</strong> Abgleich der Transaktionen mit den Schnittstellen externer Zahlungsdienstleister und Game-Provider (Evolution, NetEnt) zur Saldierung.</span>
                                 </li>
                             </ul>
                         </div>
                         <div class="slide-visual">
                             <svg width="220" height="220" viewBox="0 0 100 100">
-                                <rect x="20" y="20" width="60" height="60" rx="6" fill="none" stroke="var(--gold)" stroke-width="3"/>
-                                <path d="M35,40 L65,40 M35,50 L65,50 M35,60 L55,60" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+                                <rect x="25" y="25" width="50" height="50" rx="4" fill="none" stroke="var(--gold)" stroke-width="3"/>
+                                <circle cx="50" cy="50" r="12" fill="none" stroke="#fff" stroke-width="2"/>
+                                <path d="M45,42 L55,58 M55,42 L45,58" stroke="var(--gold)" stroke-width="2"/>
                             </svg>
                         </div>
                     </div>
                 </div>
 
-                <!-- Slide 5: Recovery Steps (4-6) -->
+                <!-- Slide 6: Recovery Steps (4-6) -->
                 <div class="slide-content">
                     <div class="slide-header">
-                        <span class="slide-tag icon-gold" style="background: rgba(212, 175, 55, 0.1);">Wiederherstellung (Teil 2)</span>
-                        <span class="slide-number">Folie 5 von 8</span>
+                        <span class="slide-tag icon-gold" style="background: rgba(212, 175, 55, 0.1);">Wiederherstellung: Phase 2</span>
+                        <span class="slide-number">Folie 6 von 11</span>
                     </div>
                     <div class="slide-grid">
                         <div class="slide-text">
-                            <h3 class="slide-title">Schritte 4 bis 6 (Plan)</h3>
-                            <p><strong>Recovery Engineer:</strong> Finalisierung der Datenbank und Qualitätssicherung vor Inbetriebnahme:</p>
-                            <ul class="slide-list" style="font-size: 0.85rem; line-height: 1.45;">
+                            <h3 class="slide-title">Recovery-Schritte 4 bis 6</h3>
+                            <p><strong>Recovery Engineer:</strong> Phase 2 schliesst die Datenbefüllung ab und etabliert präventive Schutzmassnahmen:</p>
+                            <ul class="slide-list" style="font-size: 0.85rem; line-height: 1.55;">
                                 <li>
                                     <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="icon-gold"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                                    <span><strong>4. DB neu erstellen:</strong> Generiertes Schema erstellen, gerettete Daten einfügen, Datenintegrität auf Fremdschlüssel-Fehler prüfen.</span>
+                                    <span><strong>4. Datenbank neu befüllen:</strong> Erstellen der Tabellenstrukturen, Importieren der rekonstruierten Salden und Überprüfen der relationalen Integrität.</span>
                                 </li>
                                 <li>
                                     <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="icon-gold"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                                    <span><strong>5. Sandbox Test:</strong> Verbindungstest der Applikation mit der neuen Datenbank in einer geschützten **Sandbox/Staging-Umgebung** vor Live-Schaltung.</span>
+                                    <span><strong>5. Sandbox &amp; Staging Test:</strong> Testen der Applikation in einer isolierten Umgebung zur Verifizierung aller Zahlungs-APIs und User-Logins.</span>
                                 </li>
                                 <li>
                                     <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="icon-gold"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
-                                    <span><strong>6. Post-Recovery:</strong> Abgleich mit dem letzten bekannten Stand (User, Kontosalden). Backup-Skripts korrigieren, <code>pg_dump</code> einrichten.</span>
+                                    <span><strong>6. Go-Live &amp; Prävention:</strong> Live-Schaltung, Implementierung automatisierter <code>pg_dump</code>-Backups und Einrichtung täglicher **Restore-Tests**.</span>
                                 </li>
                             </ul>
                         </div>
@@ -487,52 +522,52 @@
                     </div>
                 </div>
 
-                <!-- Slide 6: Wiederherstellungs-Prioritäten -->
+                <!-- Slide 7: Wiederherstellungs-Prioritäten -->
                 <div class="slide-content">
                     <div class="slide-header">
                         <span class="slide-tag icon-gold" style="background: rgba(212, 175, 55, 0.1);">Prioritätenliste</span>
-                        <span class="slide-number">Folie 6 von 8</span>
+                        <span class="slide-number">Folie 7 von 11</span>
                     </div>
                     <div class="slide-grid">
                         <div class="slide-text">
                             <h3 class="slide-title">System-Prioritäten</h3>
-                            <p>Unsere Wiederherstellungs-Prioritäten zur Einhaltung der Gesetze und Gewährleistung des Spielbetriebs:</p>
-                            <ol class="slide-list" style="font-size: 0.85rem; line-height: 1.45; list-style: decimal; padding-left: 20px;">
-                                <li><strong>Kontodaten:</strong> Username, Passwort, Geburtsjahr, AHV-Nr., Blutgruppe... (Für Registrierung, Login &amp; KYC-Identifikationspflicht).</li>
-                                <li style="margin-top: 5px;"><strong>Finanzdaten:</strong> Kreditkartenangaben, Banküberweisungen... (Für Abgleich &amp; Audits).</li>
-                                <li style="margin-top: 5px;"><strong>In-Game Guthaben:</strong> Letzte Slotmachine-Resultate, offene Wetten, Jackpots.</li>
-                                <li style="margin-top: 5px;"><strong>Logs &amp; Audit Trails:</strong> Für Systemüberwachung (wichtig, aber nicht kritisch für den Start).</li>
+                            <p>Die Wiederherstellung muss streng priorisiert erfolgen, um gesetzliche Vorgaben und Kundensicherheit einzuhalten:</p>
+                            <ol class="slide-list" style="font-size: 0.85rem; line-height: 1.5; list-style: decimal; padding-left: 20px;">
+                                <li><strong>Benutzer- &amp; KYC-Daten:</strong> Login-Daten, ID/KYC-Verifizierung und Sperrstatus (ESBK/OASIS). Ohne diese ist jeder Glücksspielbetrieb illegal.</li>
+                                <li style="margin-top: 5px;"><strong>Finanzdaten &amp; Salden:</strong> Aktuelle Geldbestände, verifizierte Kreditkarten- und Krypto-Transaktionen. Verhindert unberechtigte Auszahlungen.</li>
+                                <li style="margin-top: 5px;"><strong>Spieldaten (In-Game):</strong> Laufende Casino-Runden, offene Sportwetten und progressive Jackpots.</li>
+                                <li style="margin-top: 5px;"><strong>Audit Trails &amp; System-Logs:</strong> Für nachträgliche Konformitätsprüfungen, nicht kritisch für den Start.</li>
                             </ol>
                         </div>
                         <div class="slide-visual">
                             <div class="legal-card" style="padding: 1rem; background: rgba(255, 255, 255, 0.01); border-color: rgba(212, 175, 55, 0.15); width: 100%;">
-                                <h4 style="margin: 0 0 0.5rem; color: var(--gold); font-size: 1rem;">Reihenfolge</h4>
+                                <h4 style="margin: 0 0 0.5rem; color: var(--gold); font-size: 1rem;">Prioritätenpyramide</h4>
                                 <div style="display: flex; flex-direction: column; gap: 8px; font-size: 0.8rem; text-align: left;">
-                                    <div style="background: rgba(212,175,55,0.1); padding: 6px; border-left: 3px solid var(--gold);">1. Kontodaten (KYC, AHV)</div>
-                                    <div style="background: rgba(255,255,255,0.02); padding: 6px; border-left: 3px solid var(--text-secondary);">2. Finanztransaktionen</div>
-                                    <div style="background: rgba(255,255,255,0.02); padding: 6px; border-left: 3px solid var(--text-secondary);">3. Wetten &amp; Guthaben</div>
-                                    <div style="background: rgba(255,255,255,0.02); padding: 6px; border-left: 3px solid var(--text-secondary);">4. System-Logs</div>
+                                    <div style="background: rgba(212,175,55,0.15); padding: 6px; border-left: 3px solid var(--gold); font-weight: bold;">1. KYC &amp; Login (Rechtliche Basis)</div>
+                                    <div style="background: rgba(255,255,255,0.02); padding: 6px; border-left: 3px solid var(--text-secondary);">2. Wallet-Transaktionshistorie</div>
+                                    <div style="background: rgba(255,255,255,0.02); padding: 6px; border-left: 3px solid var(--text-secondary);">3. Wetten &amp; Guthabenstände</div>
+                                    <div style="background: rgba(255,255,255,0.02); padding: 6px; border-left: 3px solid var(--text-secondary);">4. Regulatorische System-Logs</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Slide 7: Krisenkommunikation (Statement & Legal) -->
+                <!-- Slide 8: Krisenkommunikation (Statement) -->
                 <div class="slide-content">
                     <div class="slide-header">
-                        <span class="slide-tag icon-gold" style="background: rgba(245, 158, 11, 0.1);">Recht &amp; PR</span>
-                        <span class="slide-number">Folie 7 von 8</span>
+                        <span class="slide-tag icon-gold" style="background: rgba(245, 158, 11, 0.1);">PR &amp; Kommunikation</span>
+                        <span class="slide-number">Folie 8 von 11</span>
                     </div>
                     <div class="slide-grid">
                         <div class="slide-text">
-                            <h3 class="slide-title">Krisen-Statement &amp; AGB</h3>
-                            <p><strong>Legal Officer Fala:</strong> Veröffentlichung eines klaren Statements. Haftungsausschluss für Datenverluste und Störungen über AGB-Klauseln (Art. 100 OR):</p>
-                            <p style="font-style: italic; color: #fff; border-left: 2px solid var(--amber); padding-left: 12px; font-size: 0.85rem; line-height: 1.4; margin: 10px 0;">
-                                "Guthaben sind absolut sicher; keine Fremdeinwirkung. Auszahlungen verzögern sich um 48 Std. Bitte abwarten, Studios nutzen lokale Listen."
+                            <h3 class="slide-title">Krisen-Statement der G&amp;G AG</h3>
+                            <p><strong>Legal Officer Fala:</strong> Vertrauen wahren und Exit-Scam-Gerüchten vorbeugen. Sachliches, transparentes Statement für Kund:innen:</p>
+                            <p style="font-style: italic; color: #fff; border-left: 3px solid var(--amber); padding-left: 12px; font-size: 0.85rem; line-height: 1.45; margin: 15px 0; background: rgba(245, 158, 11, 0.05); padding-top: 8px; padding-bottom: 8px; border-radius: 0 8px 8px 0;">
+                                "Aufgrund einer technischen Störung unserer Datenbankinfrastruktur sind unsere Plattformen vorübergehend nicht erreichbar. Wir versichern Ihnen, dass Ihre Guthaben und Daten absolut sicher sind. Es liegt kein Hackerangriff vor. Beantragte Auszahlungen verzögern sich um up to 48 Std."
                             </p>
-                            <p style="font-size: 0.85rem;">
-                                <strong>Tab-Vergleich:</strong> Schweizer BGS/UWG verlangt ESBK-Lizenz. Deutsche DDG/GlüStV verlangt LUGAS-Anbindung.
+                            <p style="font-size: 0.8rem; color: var(--text-secondary);">
+                                Das Statement ist bewusst sachlich gehalten und verweist Kund:innen auf unsere stündlich aktualisierte Statusseite, ohne auf interne IT-Fehler im Detail einzugehen.
                             </p>
                         </div>
                         <div class="slide-visual">
@@ -546,22 +581,98 @@
                     </div>
                 </div>
 
-                <!-- Slide 8: Quiz & Q&A -->
+                <!-- Slide 9: Legal Pack (Website-Recht) -->
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <span class="slide-tag icon-gold" style="background: rgba(99, 102, 241, 0.1);">Recht &amp; AGB</span>
+                        <span class="slide-number">Folie 9 von 11</span>
+                    </div>
+                    <div class="slide-grid">
+                        <div class="slide-text">
+                            <h3 class="slide-title">Website Legal Pack &amp; AGB</h3>
+                            <p>Unsere rechtliche Absicherung bei Systemfehlern stützt sich auf 3 tragende AGB-Klauseln:</p>
+                            <ul class="slide-list" style="font-size: 0.8rem; line-height: 1.45;">
+                                <li>
+                                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="icon-blue"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                                    <span><strong>Klausel 1 (Void-Regel):</strong> Fehlfunktionen der Spielsoftware oder Datenbank machen alle Gewinne und Runden ungültig. Nur der Einsatz wird zurückerstattet.</span>
+                                </li>
+                                <li>
+                                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="icon-blue"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                                    <span><strong>Klausel 2 (Salden-Master):</strong> Der im Browser des Spielers angezeigte Kontostand ist unverbindlich. Massgebend sind ausschliesslich die Daten auf unseren Servern.</span>
+                                </li>
+                                <li>
+                                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="icon-blue"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                                    <span><strong>Klausel 3 (2FA-Pflicht):</strong> Nutzer:innen sind verpflichtet, ihre Zugangsdaten vertraulich zu behandeln und nach Möglichkeit die Zwei-Faktor-Authentisierung zu nutzen.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="slide-visual">
+                            <svg width="220" height="220" viewBox="0 0 100 100">
+                                <path d="M20,25 L80,25 M50,25 L50,85 M30,85 L70,85" stroke="var(--indigo)" stroke-width="4"/>
+                                <circle cx="30" cy="50" r="10" fill="none" stroke="var(--indigo)" stroke-width="3"/>
+                                <circle cx="70" cy="50" r="10" fill="none" stroke="var(--indigo)" stroke-width="3"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 10: Rechtsvergleich CH vs EU -->
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <span class="slide-tag icon-gold" style="background: rgba(139, 92, 246, 0.1);">Rechtsvergleich</span>
+                        <span class="slide-number">Folie 10 von 11</span>
+                    </div>
+                    <div class="slide-grid">
+                        <div class="slide-text">
+                            <h3 class="slide-title">Unterschiede Schweiz vs. DE/EU</h3>
+                            <p>Für unsere Tochtergesellschaften (z.B. GibGeld.de vs. Trallalero.ch) gelten stark abweichende Bestimmungen:</p>
+                            <ul class="slide-list" style="font-size: 0.8rem; line-height: 1.45;">
+                                <li>
+                                    <span><strong>Impressumspflicht:</strong> In der Schweiz nach UWG geregelt; in Deutschland extrem streng nach § 5 DDG (Vorgaben des Glücksspielstaatsvertrags GlüStV).</span>
+                                </li>
+                                <li style="margin-top: 8px;">
+                                    <span><strong>Haftungsausschluss:</strong> In der Schweiz sind Haftungsausschlüsse für leichte/mittlere Fahrlässigkeit (Art. 100 OR) gut möglich; in Deutschland greift die strikte AGB-Klauselkontrolle (§ 307 BGB).</span>
+                                </li>
+                                <li style="margin-top: 8px;">
+                                    <span><strong>Gerichtsstand:</strong> CH erlaubt vertragliche Gerichtsstandsvereinbarungen (Zug); in der EU ist das Verbraucherrecht zwingend (Gerichtsstand am Wohnsitz des Nutzers).</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="slide-visual">
+                            <div style="font-size: 4rem; display: flex; gap: 20px;">
+                                <span>🇨🇭</span>
+                                <span style="font-size: 2.5rem; align-self: center; color: var(--text-secondary);">vs</span>
+                                <span>🇪🇺</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 11: Quiz & Q&A -->
                 <div class="slide-content">
                     <div class="slide-header">
                         <span class="slide-tag icon-green" style="background: rgba(16, 185, 129, 0.1);">Quiz &amp; Fragen</span>
-                        <span class="slide-number">Folie 8 von 8</span>
+                        <span class="slide-number">Folie 11 von 11</span>
                     </div>
                     <div class="slide-grid">
                         <div class="slide-text">
                             <h3 class="slide-title">Quizfragen an die Klasse</h3>
                             
                             <div class="quiz-container">
-                                <div class="quiz-question">Frage 1: Wie rekonstruieren wir das Datenbankschema vollautomatisch?</div>
-                                <div class="quiz-answer"><strong>Antwort:</strong> Über die Entity Framework Migrations und den Database Context.</div>
+                                <div class="quiz-item">
+                                    <div class="quiz-question">Frage 1: Wie rekonstruieren wir das Datenbankschema ohne existierendes DB-Backup?</div>
+                                    <div class="quiz-answer fragment"><strong>Antwort:</strong> Durch die Rekonstruktion aus Entity Framework Migrations, Backend-Model-Code und DB Context im Repository.</div>
+                                </div>
                                 
-                                <div class="quiz-question">Frage 2: Gilt unser Gerichtsstand (Zug) uneingeschränkt für EU-Spieler?</div>
-                                <div class="quiz-answer"><strong>Antwort:</strong> Nein, im EU-Verbraucherschutzrecht gilt zwingend der Wohnsitz des Spielers. Gerichtsstandsklauseln in B2C-AGB sind dort ungültig.</div>
+                                <div class="quiz-item fragment" style="margin-top: 1rem;">
+                                    <div class="quiz-question">Frage 2: Können wir die Einzelergebnisse der Spielrunden rekonstruieren?</div>
+                                    <div class="quiz-answer fragment"><strong>Antwort:</strong> Nur teilweise über die API-Logs der Spielprovider (z. B. Evolution, NetEnt) und die Zahlungsabgleiche.</div>
+                                </div>
+                                
+                                <div class="quiz-item fragment" style="margin-top: 1rem;">
+                                    <div class="quiz-question">Frage 3: Gilt Zug (Schweiz) als Gerichtsstand für deutsche Spieler auf GibGeld.de?</div>
+                                    <div class="quiz-answer fragment"><strong>Antwort:</strong> Nein, im EU-Recht gilt zwingend deutsches Recht und der Wohnsitz des Verbrauchers bei B2C-Glücksspiel.</div>
+                                </div>
                             </div>
                         </div>
                         <div class="slide-visual">
@@ -586,8 +697,11 @@
                         <div class="dot"></div>
                         <div class="dot"></div>
                         <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
                     </div>
-                    <button id="next-btn" class="btn-nav">Nächster Schritt</button>
+                    <button id="next-btn" class="btn-nav">Weiter</button>
                 </div>
             </div>
         </div>

@@ -7,17 +7,37 @@ document.addEventListener('DOMContentLoaded', () => {
     const slideGlow = document.querySelector('.slide-glow');
     let currentSlide = 0;
 
-    // Theme definitions for slide glow and indicators (extended to 8 slides)
+    // Theme definitions for slide glow and indicators (extended to 11 slides)
     const slideThemes = [
         { glow: 'radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, rgba(0,0,0,0) 70%)' },  // 1. Gold (Titel)
-        { glow: 'radial-gradient(circle, rgba(244, 63, 94, 0.15) 0%, rgba(0,0,0,0) 70%)' },  // 2. Red (Incident)
-        { glow: 'radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, rgba(0,0,0,0) 70%)' },  // 3. Blue (RPO/RTO)
-        { glow: 'radial-gradient(circle, rgba(168, 85, 247, 0.15) 0%, rgba(0,0,0,0) 70%)' }, // 4. Purple (Steps 1-3)
-        { glow: 'radial-gradient(circle, rgba(67, 56, 202, 0.15) 0%, rgba(0,0,0,0) 70%)' },  // 5. Indigo (Steps 4-6)
-        { glow: 'radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, rgba(0,0,0,0) 70%)' },  // 6. Gold (Prioritäten)
-        { glow: 'radial-gradient(circle, rgba(245, 158, 11, 0.15) 0%, rgba(0,0,0,0) 70%)' },  // 7. Orange (PR & Recht)
-        { glow: 'radial-gradient(circle, rgba(16, 185, 129, 0.15) 0%, rgba(0,0,0,0) 70%)' }   // 8. Green (Quiz & Q&A)
+        { glow: 'radial-gradient(circle, rgba(244, 63, 94, 0.15) 0%, rgba(0,0,0,0) 70%)' },  // 2. Red (Incident Summary)
+        { glow: 'radial-gradient(circle, rgba(239, 68, 68, 0.15) 0%, rgba(0,0,0,0) 70%)' },  // 3. Dark Red (Kritikalität)
+        { glow: 'radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, rgba(0,0,0,0) 70%)' },  // 4. Blue (RPO/RTO)
+        { glow: 'radial-gradient(circle, rgba(168, 85, 247, 0.15) 0%, rgba(0,0,0,0) 70%)' }, // 5. Purple (Steps 1-3)
+        { glow: 'radial-gradient(circle, rgba(67, 56, 202, 0.15) 0%, rgba(0,0,0,0) 70%)' },  // 6. Indigo (Steps 4-6)
+        { glow: 'radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, rgba(0,0,0,0) 70%)' },  // 7. Gold (Prioritäten)
+        { glow: 'radial-gradient(circle, rgba(245, 158, 11, 0.15) 0%, rgba(0,0,0,0) 70%)' },  // 8. Orange (PR & Statement)
+        { glow: 'radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, rgba(0,0,0,0) 70%)' },  // 9. Light Blue (AGB Clauses)
+        { glow: 'radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, rgba(0,0,0,0) 70%)' },  // 10. Violet (Comparison)
+        { glow: 'radial-gradient(circle, rgba(16, 185, 129, 0.15) 0%, rgba(0,0,0,0) 70%)' }   // 11. Green (Quiz & Q&A)
     ];
+
+    function updateButtons() {
+        const activeSlide = slides[currentSlide];
+        const hasHiddenFragments = Array.from(activeSlide.querySelectorAll('.fragment')).some(f => !f.classList.contains('visible'));
+        const hasVisibleFragments = Array.from(activeSlide.querySelectorAll('.fragment')).some(f => f.classList.contains('visible'));
+        
+        // Prev is disabled only on first slide with no visible fragments
+        prevBtn.disabled = (currentSlide === 0 && !hasVisibleFragments);
+        
+        if (currentSlide === slides.length - 1 && !hasHiddenFragments) {
+            nextBtn.textContent = 'Abschliessen';
+            nextBtn.classList.add('btn-primary');
+        } else {
+            nextBtn.textContent = 'Weiter';
+            nextBtn.classList.remove('btn-primary');
+        }
+    }
 
     function showSlide(index) {
         // Remove active states
@@ -33,38 +53,59 @@ document.addEventListener('DOMContentLoaded', () => {
             slideGlow.style.background = slideThemes[index].glow;
         }
 
-        // Handle navigation buttons
-        prevBtn.disabled = index === 0;
-        
-        if (index === slides.length - 1) {
-            nextBtn.textContent = 'Abschliessen';
-            nextBtn.classList.add('btn-primary');
-        } else {
-            nextBtn.textContent = 'Nächster Schritt';
-            nextBtn.classList.remove('btn-primary');
-        }
-
         currentSlide = index;
+
+        // Reset fragments to hidden on the target slide (usually when moving forward to it)
+        const fragments = slides[index].querySelectorAll('.fragment');
+        fragments.forEach(f => f.classList.remove('visible'));
+
+        updateButtons();
     }
 
-    prevBtn.addEventListener('click', () => {
-        if (currentSlide > 0) {
-            showSlide(currentSlide - 1);
-        }
-    });
+    function goNext() {
+        const activeSlide = slides[currentSlide];
+        const fragments = activeSlide.querySelectorAll('.fragment');
+        const firstHiddenFragment = Array.from(fragments).find(f => !f.classList.contains('visible'));
 
-    nextBtn.addEventListener('click', () => {
-        if (currentSlide < slides.length - 1) {
-            showSlide(currentSlide + 1);
+        if (firstHiddenFragment) {
+            firstHiddenFragment.classList.add('visible');
+            updateButtons();
         } else {
-            // Close fullscreen and scroll to legal
-            document.body.classList.remove('fullscreen-active');
-            const legalSection = document.getElementById('details-sec');
-            if (legalSection) {
-                legalSection.scrollIntoView({ behavior: 'smooth' });
+            if (currentSlide < slides.length - 1) {
+                showSlide(currentSlide + 1);
+            } else {
+                // Close fullscreen and scroll to details
+                document.body.classList.remove('fullscreen-active');
+                const legalSection = document.getElementById('details-sec');
+                if (legalSection) {
+                    legalSection.scrollIntoView({ behavior: 'smooth' });
+                }
             }
         }
-    });
+    }
+
+    function goPrev() {
+        const activeSlide = slides[currentSlide];
+        const fragments = activeSlide.querySelectorAll('.fragment');
+        const lastVisibleFragment = Array.from(fragments).reverse().find(f => f.classList.contains('visible'));
+
+        if (lastVisibleFragment) {
+            lastVisibleFragment.classList.remove('visible');
+            updateButtons();
+        } else {
+            if (currentSlide > 0) {
+                showSlide(currentSlide - 1);
+                // When going back to the previous slide, make all its fragments visible immediately
+                // so the user starts at the "end" of the previous slide's content.
+                const prevSlideFragments = slides[currentSlide].querySelectorAll('.fragment');
+                prevSlideFragments.forEach(f => f.classList.add('visible'));
+                updateButtons();
+            }
+        }
+    }
+
+    prevBtn.addEventListener('click', goPrev);
+    nextBtn.addEventListener('click', goNext);
 
     // Dot click triggers
     dots.forEach((dot, index) => {
@@ -96,14 +137,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if (document.body.classList.contains('fullscreen-active')) {
             if (e.key === 'ArrowRight' || e.key === ' ') {
                 e.preventDefault();
-                if (currentSlide < slides.length - 1) {
-                    showSlide(currentSlide + 1);
-                }
+                goNext();
             } else if (e.key === 'ArrowLeft') {
                 e.preventDefault();
-                if (currentSlide > 0) {
-                    showSlide(currentSlide - 1);
-                }
+                goPrev();
             } else if (e.key === 'Escape') {
                 e.preventDefault();
                 document.body.classList.remove('fullscreen-active');
