@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoneyMaker.com - Premium Online Casino</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Montserrat:wght@400;600&display=swap');
+        body {
+            background-color: #0b0707;
+            color: #f3f4f6;
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: radial-gradient(circle at top, #300c0c 0%, #0b0707 70%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header {
+            text-align: center;
+            padding: 3rem 1rem 1rem;
+        }
+        svg {
+            width: 100px;
+            height: 100px;
+            filter: drop-shadow(0 0 15px rgba(245, 158, 11, 0.4));
+        }
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 3rem;
+            color: #ffe47e;
+            margin: 1rem 0 0.5rem;
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+            letter-spacing: 2px;
+        }
+        .tagline {
+            color: #d4af37;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: 0.85rem;
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+        .main-container {
+            max-width: 900px;
+            width: 90%;
+            background: rgba(26, 15, 15, 0.7);
+            border: 2px solid #851b1b;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.8), inset 0 0 20px rgba(133, 27, 27, 0.3);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin-bottom: 3rem;
+            backdrop-filter: blur(10px);
+            text-align: center;
+        }
+        .jackpot-display {
+            background: #000;
+            border: 2px dashed #ffe47e;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 1.5rem auto 2.5rem;
+            max-width: 500px;
+        }
+        .jackpot-title {
+            color: #ef4444;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+        .jackpot-amount {
+            font-family: 'Cinzel', serif;
+            font-size: 2.8rem;
+            color: #ffe47e;
+            font-weight: 900;
+            text-shadow: 0 0 15px rgba(255, 228, 126, 0.5);
+            letter-spacing: 1px;
+        }
+        .game-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 3rem;
+        }
+        @media (max-width: 600px) {
+            .game-grid { grid-template-columns: 1fr; }
+        }
+        .game-card {
+            background: #110909;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: transform 0.3s, border-color 0.3s;
+            cursor: pointer;
+        }
+        .game-card:hover {
+            transform: translateY(-5px);
+            border-color: #ffe47e;
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.2);
+        }
+        .game-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.8rem;
+        }
+        .game-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.15rem;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+        .game-desc {
+            font-size: 0.8rem;
+            color: #9ca3af;
+        }
+        .btn-back {
+            background: linear-gradient(135deg, #d4af37 0%, #8a6f27 100%);
+            color: #000000;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-family: 'Cinzel', serif;
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-decoration: none;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+        .btn-back:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="40" fill="radial-gradient(circle, #ffe47e 0%, #f59e0b 100%)" stroke="#b45309" stroke-width="3"/>
+            <circle cx="50" cy="50" r="32" fill="none" stroke="#fff" stroke-dasharray="3,3" stroke-width="1.5"/>
+            <text x="50" y="65" font-family="'Cinzel', serif" font-weight="900" font-size="42" fill="#78350f" text-anchor="middle">$</text>
+        </svg>
+        <h1>MoneyMaker</h1>
+        <div class="tagline">The Golden Standard of Casino Gaming</div>
+    </header>
+
+    <div class="main-container">
+        <div class="jackpot-display">
+            <div class="jackpot-title">Golden Mega Jackpot</div>
+            <div class="jackpot-amount">$4,859,321.45</div>
+        </div>
+
+        <div class="game-grid">
+            <div class="game-card">
+                <div class="game-icon">🎰</div>
+                <div class="game-title">Mega Slots</div>
+                <div class="game-desc">Spin the gold reels and hit the absolute fortune.</div>
+            </div>
+            <div class="game-card">
+                <div class="game-icon">🃏</div>
+                <div class="game-title">VIP Blackjack</div>
+                <div class="game-desc">Test your cards in our exclusive high-stakes VIP rooms.</div>
+            </div>
+            <div class="game-card">
+                <div class="game-icon">🎡</div>
+                <div class="game-title">Gold Roulette</div>
+                <div class="game-desc">Experience the suspense of the luxury spinning wheel.</div>
+            </div>
+        </div>
+
+        <a href="index.html" class="btn-back">Zurück zum Hauptportal</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="gsw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trallalero-Dollarla.ch - Schwyzer Dialekt-Lotto & Rubbellos</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Open+Sans:wght@400;600&display=swap');
+        body {
+            background-color: #f7f9fa;
+            color: #2d3748;
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: radial-gradient(circle at top, #ffebeb 0%, #f7f9fa 70%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header {
+            text-align: center;
+            padding: 3rem 1rem 1rem;
+        }
+        svg {
+            width: 100px;
+            height: 100px;
+            filter: drop-shadow(0 4px 6px rgba(218, 41, 28, 0.3));
+        }
+        h1 {
+            font-family: 'Fredoka One', cursive;
+            font-size: 2.8rem;
+            color: #da291c;
+            margin: 1rem 0 0.5rem;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+        }
+        .tagline {
+            color: #718096;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.85rem;
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+        .main-container {
+            max-width: 900px;
+            width: 90%;
+            background: #ffffff;
+            border: 3px solid #da291c;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+        .swiss-alert {
+            background: #ffebeb;
+            border: 1px solid #da291c;
+            color: #da291c;
+            padding: 10px;
+            border-radius: 8px;
+            font-weight: bold;
+            margin-bottom: 2rem;
+        }
+        .scratch-board {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            max-width: 450px;
+            margin: 0 auto 2.5rem;
+        }
+        .scratch-field {
+            background: #e2e8f0;
+            border: 2px solid #cbd5e0;
+            border-radius: 12px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.2s;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+        }
+        .scratch-field:hover {
+            transform: scale(1.05);
+            background: #cbd5e0;
+        }
+        .btn-back {
+            background: #da291c;
+            color: #ffffff;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-family: 'Fredoka One', cursive;
+            font-size: 0.95rem;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background 0.2s;
+            display: inline-block;
+            box-shadow: 0 4px 10px rgba(218, 41, 28, 0.3);
+        }
+        .btn-back:hover {
+            background: #a61c12;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10,80 L50,20 L90,80 Z" fill="#da291c" stroke="#fff" stroke-width="3"/>
+            <rect x="44" y="44" width="12" height="20" fill="#fff"/>
+            <rect x="40" y="48" width="20" height="12" fill="#fff"/>
+            <circle cx="30" cy="73" r="6" fill="#ffe47e" stroke="#d4af37" stroke-width="1.5"/>
+            <circle cx="70" cy="73" r="6" fill="#ffe47e" stroke="#d4af37" stroke-width="1.5"/>
+        </svg>
+        <h1>Trallalero-Dollarla</h1>
+        <div class="tagline">S'originell Schwyzer Rubbellos</div>
+    </header>
+
+    <div class="main-container">
+        <div class="swiss-alert">
+            Konzessioniert nach Bundesgesetz über Geldspiele (BGS). Spielsuchtprävention aktiv.
+        </div>
+
+        <div class="scratch-board">
+            <div class="scratch-field">💰</div>
+            <div class="scratch-field">🇨🇭</div>
+            <div class="scratch-field">💰</div>
+            <div class="scratch-field">🐮</div>
+            <div class="scratch-field">💰</div>
+            <div class="scratch-field">🏔️</div>
+        </div>
+
+        <a href="index.html" class="btn-back">Zrugg zum Hauptportal</a>
+    </div>
+</body>
+</html>

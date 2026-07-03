@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PonyUp.co.uk - Premier UK Horse Racing Bets</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Montserrat:wght@400;600&display=swap');
+        body {
+            background-color: #0c1310;
+            color: #e6eae7;
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: radial-gradient(circle at top, #142e20 0%, #0c1310 80%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header {
+            text-align: center;
+            padding: 3rem 1rem 1rem;
+        }
+        svg {
+            width: 100px;
+            height: 100px;
+            filter: drop-shadow(0 4px 6px rgba(212, 175, 55, 0.4));
+        }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: #d4af37;
+            margin: 1rem 0 0.5rem;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+            font-style: italic;
+        }
+        .tagline {
+            color: #a3b899;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: 0.85rem;
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+        .main-container {
+            max-width: 900px;
+            width: 90%;
+            background: #111a15;
+            border: 2px solid #d4af37;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-bottom: 3rem;
+        }
+        .race-list {
+            margin: 1.5rem 0 2.5rem;
+        }
+        .race-item {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            border-radius: 8px;
+            padding: 1.2rem;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: border-color 0.3s;
+        }
+        .race-item:hover {
+            border-color: #d4af37;
+        }
+        .runner-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .runner-number {
+            background: #d4af37;
+            color: #000;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+        }
+        .runner-name {
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        .btn-bet {
+            background: #d4af37;
+            color: #000;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .btn-bet:hover {
+            background: #fff;
+        }
+        .btn-back {
+            background: transparent;
+            color: #d4af37;
+            border: 2px solid #d4af37;
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+        .btn-back:hover {
+            background: #d4af37;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <path d="M30,30 C30,65 70,65 70,30" fill="none" stroke="#d4af37" stroke-width="9" stroke-linecap="round"/>
+            <circle cx="37" cy="42" r="2.5" fill="#000"/>
+            <circle cx="44" cy="49" r="2.5" fill="#000"/>
+            <circle cx="56" cy="49" r="2.5" fill="#000"/>
+            <circle cx="63" cy="42" r="2.5" fill="#000"/>
+            <path d="M42,32 C48,26 53,24 58,26 C57,29 55,34 50,37 Z" fill="#fff"/>
+        </svg>
+        <h1>PonyUp Racing</h1>
+        <div class="tagline">Exclusive UK Turf Racing Betting</div>
+    </header>
+
+    <div class="main-container">
+        <h2 style="font-family: 'Playfair Display', serif; color: #d4af37; text-align: center; margin-bottom: 2rem;">Ascot Stakes - Race 3</h2>
+
+        <div class="race-list">
+            <div class="race-item">
+                <div class="runner-info">
+                    <span class="runner-number">1</span>
+                    <span class="runner-name">Golden Gallop</span>
+                </div>
+                <button class="btn-bet">Bet 3/1</button>
+            </div>
+            <div class="race-item">
+                <div class="runner-info">
+                    <span class="runner-number">2</span>
+                    <span class="runner-name">Royal Shadow</span>
+                </div>
+                <button class="btn-bet">Bet 5/2</button>
+            </div>
+            <div class="race-item">
+                <div class="runner-info">
+                    <span class="runner-number">3</span>
+                    <span class="runner-name">Storm Raider</span>
+                </div>
+                <button class="btn-bet">Bet 12/1</button>
+            </div>
+        </div>
+
+        <a href="index.html" class="btn-back">Return to Portal</a>
+    </div>
+</body>
+</html>

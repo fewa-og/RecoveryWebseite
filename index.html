@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Günther & Guhner AG - Konzern-Struktur & Incident Recovery</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .brand-card-link {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+        }
+        .brand-card-link:hover .brand-name {
+            color: var(--gold);
+        }
+        /* Style for Quiz items on the quiz slide */
+        .quiz-container {
+            text-align: left;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-top: 1rem;
+        }
+        .quiz-question {
+            font-weight: bold;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+        .quiz-answer {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            padding-left: 10px;
+            border-left: 2px solid var(--indigo);
+        }
+    </style>
+</head>
+<body>
+    <div class="glow-bg"></div>
+    <div class="glow-bg-bottom"></div>
+
+    <!-- Header Navigation -->
+    <nav>
+        <div class="nav-logo">
+            <!-- Parent Company SVG Logo -->
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="navGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#fffbde"/>
+                        <stop offset="50%" stop-color="#d4af37"/>
+                        <stop offset="100%" stop-color="#8a6f27"/>
+                    </linearGradient>
+                </defs>
+                <polygon points="50,10 85,50 50,90 15,50" fill="none" stroke="url(#navGoldGrad)" stroke-width="5"/>
+                <polygon points="50,22 73,50 50,78 27,50" fill="none" stroke="url(#navGoldGrad)" stroke-width="2" stroke-dasharray="3,3"/>
+                <text x="50" y="59" font-family="'Outfit', sans-serif" font-weight="900" font-size="26" fill="url(#navGoldGrad)" text-anchor="middle">G&G</text>
+            </svg>
+            <span>GÜNTHER & GUHNER AG</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#brands-sec">Konzern-Marken</a></li>
+            <li><a href="#incident-sec">Incident-Präsentation</a></li>
+            <li><a href="#details-sec">Recht & Compliance</a></li>
+            <li><a href="#statement-sec">Statement</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Header -->
+    <header class="hero">
+        <span class="hero-subtitle">Mutterkonzern & Tochtergesellschaften</span>
+        <h1>Globales eGaming- &amp; Glücksspiel-Netzwerk</h1>
+        <p>Ein starkes Verbundnetzwerk konzessionierter Casino-, Sportwetten- und Lotteriemarken, geschützt durch fortschrittliche Sicherheits- und Notfallkonzepte.</p>
+    </header>
+
+    <!-- Brands Grid Section -->
+    <section id="brands-sec" class="brands-container">
+        <h2 class="section-title">Unsere Tochtergesellschaften</h2>
+        <p style="text-align: center; color: var(--text-secondary); margin-bottom: 3rem; margin-top: -1.5rem;">Klicken Sie auf eine Marke, um ihre eigenständige Webseite anzuzeigen.</p>
+        
+        <div class="brands-grid">
+            <!-- 1. MoneyMaker.com -->
+            <a href="moneymaker.html" class="brand-card-link">
+                <div class="brand-card">
+                    <div class="brand-header">
+                        <div class="brand-logo-container">
+                            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient id="coinGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#ffe47e"/>
+                                        <stop offset="100%" stop-color="#f59e0b"/>
+                                    </linearGradient>
+                                </defs>
+                                <circle cx="50" cy="50" r="40" fill="url(#coinGrad)" stroke="#b45309" stroke-width="3"/>
+                                <circle cx="50" cy="50" r="32" fill="none" stroke="#fff" stroke-dasharray="3,3" stroke-width="1.5"/>
+                                <text x="50" y="65" font-family="'Outfit', sans-serif" font-weight="900" font-size="42" fill="#78350f" text-anchor="middle">$</text>
+                            </svg>
+                        </div>
+                        <span class="brand-flag">🇬🇧</span>
+                    </div>
+                    <h3 class="brand-name">MoneyMaker.com</h3>
+                    <p class="brand-desc">Internationales Flaggschiff-Online-Casino mit modernsten HTML5-Slots und Live-Dealer-Angeboten.</p>
+                    <div class="brand-meta">
+                        <span class="brand-domain">moneymaker.com</span>
+                        <span class="brand-badge badge-live">Casino</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- 2. CashGrabber.net -->
+            <a href="cashgrabber.html" class="brand-card-link">
+                <div class="brand-card">
+                    <div class="brand-header">
+                        <div class="brand-logo-container">
+                            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient id="neonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#06b6d4"/>
+                                        <stop offset="100%" stop-color="#3b82f6"/>
+                                    </linearGradient>
+                                </defs>
+                                <path d="M20,70 L20,30 L50,15 L80,30 L80,70 L50,85 Z" fill="none" stroke="url(#neonGrad)" stroke-width="4"/>
+                                <path d="M35,55 C35,55 40,40 50,40 C60,40 65,55 65,55" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+                                <circle cx="50" cy="35" r="8" fill="url(#neonGrad)"/>
+                                <path d="M50,35 L50,55" stroke="#fff" stroke-width="3"/>
+                            </svg>
+                        </div>
+                        <span class="brand-flag">🇺🇸</span>
+                    </div>
+                    <h3 class="brand-name">CashGrabber.net</h3>
+                    <p class="brand-desc">Plattform für eSport-Wetten, Echtzeit-Arcade-Herausforderungen und Turniere.</p>
+                    <div class="brand-meta">
+                        <span class="brand-domain">cashgrabber.net</span>
+                        <span class="brand-badge badge-sports">Arcade</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- 3. GibGeld.de -->
+            <a href="gibgeld.html" class="brand-card-link">
+                <div class="brand-card">
+                    <div class="brand-header">
+                        <div class="brand-logo-container">
+                            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15,20 L85,20 L75,70 L50,90 L25,70 Z" fill="#1c1d24" stroke="#ff0000" stroke-width="4"/>
+                                <path d="M25,25 H75 V32 H25 Z" fill="#000"/>
+                                <path d="M25,32 H75 V39 H25 Z" fill="#dd0000"/>
+                                <path d="M25,39 H75 V46 H25 Z" fill="#ffcc00"/>
+                                <text x="50" y="75" font-family="'Outfit', sans-serif" font-weight="900" font-size="20" fill="#fff" text-anchor="middle">GIB</text>
+                            </svg>
+                        </div>
+                        <span class="brand-flag">🇩🇪</span>
+                    </div>
+                    <h3 class="brand-name">GibGeld.de</h3>
+                    <p class="brand-desc">Lizenziertes deutsches Sportwettenportal mit strikter Anbindung an OASIS und LUGAS (GlüStV).</p>
+                    <div class="brand-meta">
+                        <span class="brand-domain">gibgeld.de</span>
+                        <span class="brand-badge badge-sports">Sportwetten</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- 4. Trallalero-Dollarla.ch -->
+            <a href="trallalero.html" class="brand-card-link">
+                <div class="brand-card">
+                    <div class="brand-header">
+                        <div class="brand-logo-container">
+                            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10,80 L50,20 L90,80 Z" fill="#da291c" stroke="#fff" stroke-width="3"/>
+                                <rect x="44" y="44" width="12" height="20" fill="#fff"/>
+                                <rect x="40" y="48" width="20" height="12" fill="#fff"/>
+                                <circle cx="30" cy="73" r="6" fill="#ffe47e" stroke="#d4af37" stroke-width="1.5"/>
+                                <circle cx="70" cy="73" r="6" fill="#ffe47e" stroke="#d4af37" stroke-width="1.5"/>
+                            </svg>
+                        </div>
+                        <span class="brand-flag">🇨🇭</span>
+                    </div>
+                    <h3 class="brand-name">Trallalero-Dollarla.ch</h3>
+                    <p class="brand-desc">Schweizer Lotterieportal und Rubbellose mit regionalem Schweizerdeutsch-Kultfaktor.</p>
+                    <div class="brand-meta">
+                        <span class="brand-domain">trallalero-dollarla.ch</span>
+                        <span class="brand-badge badge-swiss">Lotterie</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- 5. Dinero-Dinero.mx -->
+            <a href="dinerodinero.html" class="brand-card-link">
+                <div class="brand-card">
+                    <div class="brand-header">
+                        <div class="brand-logo-container">
+                            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="50" cy="50" r="23" fill="#f97316"/>
+                                <path d="M50,10 L50,20 M50,80 L50,90 M10,50 L20,50 M80,50 L90,50" stroke="#eab308" stroke-width="4" stroke-linecap="round"/>
+                                <rect x="38" y="38" width="24" height="24" rx="4" fill="#fff" stroke="#10b981" stroke-width="2"/>
+                                <circle cx="45" cy="45" r="3" fill="#ef4444"/>
+                                <circle cx="55" cy="55" r="3" fill="#ef4444"/>
+                            </svg>
+                        </div>
+                        <span class="brand-flag">🇲🇽</span>
+                    </div>
+                    <h3 class="brand-name">Dinero-Dinero.mx</h3>
+                    <p class="brand-desc">Lateinamerikanisches Bingo- und Casino-Erlebnis mit lokalen Jackpots und Lotterie-Runden.</p>
+                    <div class="brand-meta">
+                        <span class="brand-domain">dinero-dinero.mx</span>
+                        <span class="brand-badge badge-live">Slots</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- 6. PonyUp.co.uk -->
+            <a href="ponyup.html" class="brand-card-link">
+                <div class="brand-card">
+                    <div class="brand-header">
+                        <div class="brand-logo-container">
+                            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M30,30 C30,65 70,65 70,30" fill="none" stroke="#d4af37" stroke-width="9" stroke-linecap="round"/>
+                                <circle cx="37" cy="42" r="2.5" fill="#000"/>
+                                <circle cx="44" cy="49" r="2.5" fill="#000"/>
+                                <circle cx="56" cy="49" r="2.5" fill="#000"/>
+                                <circle cx="63" cy="42" r="2.5" fill="#000"/>
+                                <path d="M42,32 C48,26 53,24 58,26 C57,29 55,34 50,37 Z" fill="#fff"/>
+                            </svg>
+                        </div>
+                        <span class="brand-flag">🇬🇧</span>
+                    </div>
+                    <h3 class="brand-name">PonyUp.co.uk</h3>
+                    <p class="brand-desc">Englisches Traditionsportal für Pferderennwetten, Hundebahnen und Live-Streams.</p>
+                    <div class="brand-meta">
+                        <span class="brand-domain">ponyup.co.uk</span>
+                        <span class="brand-badge badge-sports">Sport</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- 7. Fric-Frac.fr -->
+            <a href="fricfrac.html" class="brand-card-link">
+                <div class="brand-card">
+                    <div class="brand-header">
+                        <div class="brand-logo-container">
+                            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M50,15 C45,35 25,45 25,60 C25,75 50,75 50,75 C50,75 75,75 75,60 C75,45 55,35 50,15 Z" fill="#3b82f6" stroke="#fff" stroke-width="2"/>
+                                <path d="M50,75 L50,85 L45,85 L55,85 Z" stroke="#fff" stroke-width="3"/>
+                                <circle cx="50" cy="55" r="5" fill="#ef4444"/>
+                            </svg>
+                        </div>
+                        <span class="brand-flag">🇫🇷</span>
+                    </div>
+                    <h3 class="brand-name">Fric-Frac.fr</h3>
+                    <p class="brand-desc">Mondäne französische Online-Pokerräume, Blackjack-Tische und exklusive Turniere.</p>
+                    <div class="brand-meta">
+                        <span class="brand-domain">fric-frac.fr</span>
+                        <span class="brand-badge badge-live">Poker</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- 8. KronaKicker.se -->
+            <a href="kronakicker.html" class="brand-card-link">
+                <div class="brand-card">
+                    <div class="brand-header">
+                        <div class="brand-logo-container">
+                            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20,70 L15,35 L40,50 L50,30 L60,50 L85,35 L80,70 Z" fill="#eab308" stroke="#1d4ed8" stroke-width="3"/>
+                                <rect x="25" y="70" width="50" height="8" fill="#1d4ed8"/>
+                                <circle cx="50" cy="30" r="3" fill="#ef4444"/>
+                                <circle cx="15" cy="35" r="3" fill="#ef4444"/>
+                                <circle cx="85" cy="35" r="3" fill="#ef4444"/>
+                            </svg>
+                        </div>
+                        <span class="brand-flag">🇸🇪</span>
+                    </div>
+                    <h3 class="brand-name">KronaKicker.se</h3>
+                    <p class="brand-desc">Schwedische Online-Spielbank mit Fokus auf progressive Millionen-Jackpots und Trustly-Sync.</p>
+                    <div class="brand-meta">
+                        <span class="brand-domain">kronakicker.se</span>
+                        <span class="brand-badge badge-live">Jackpot</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- 9. VinciVeloce.it -->
+            <a href="vinciveloce.html" class="brand-card-link">
+                <div class="brand-card">
+                    <div class="brand-header">
+                        <div class="brand-logo-container">
+                            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="50" cy="50" r="35" fill="none" stroke="#10b981" stroke-width="5"/>
+                                <circle cx="50" cy="50" r="28" fill="none" stroke="#fff" stroke-width="2"/>
+                                <path d="M50,15 L50,85 M15,50 L85,50" stroke="#ef4444" stroke-width="3"/>
+                                <path d="M42,42 L58,42 L56,54 C56,58 44,58 44,54 Z" fill="#eab308"/>
+                                <path d="M50,56 L50,62 M45,62 L55,62" stroke="#eab308" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <span class="brand-flag">🇮🇹</span>
+                    </div>
+                    <h3 class="brand-name">VinciVeloce.it</h3>
+                    <p class="brand-desc">Italienisches Portal für virtuelle Sofortgewinne, Online-Rubbelkarten und eTombola.</p>
+                    <div class="brand-meta">
+                        <span class="brand-domain">vinciveloce.it</span>
+                        <span class="brand-badge badge-sports">Scratch</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Incident Presentation Section -->
+    <section id="incident-sec" class="presentation-section">
+        <div class="presentation-container">
+            <h2 class="section-title">Incident &amp; Recovery Walkthrough</h2>
+
+            <!-- Play Presentation Buttons -->
+            <div class="pres-trigger-container">
+                <button id="start-pres-btn" class="btn-start-presentation">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M7 6v12l10-6z"/>
+                    </svg>
+                    Präsentationsmodus starten (Vollbild / Pfeiltasten)
+                </button>
+            </div>
+            
+            <div class="slide-box">
+                <button id="close-pres-btn" title="Vollbild schliessen">&times;</button>
+                <div class="slide-glow"></div>
+
+                <!-- Slide 1: Startfolie (Titel) -->
+                <div class="slide-content active">
+                    <div class="slide-header">
+                        <span class="slide-tag icon-gold" style="background: rgba(212, 175, 55, 0.1);">Titel-Folie</span>
+                        <span class="slide-number">Folie 1 von 8</span>
+                    </div>
+                    <div class="slide-grid">
+                        <div class="slide-text">
+                            <h3 class="slide-title">M231 Fallstudie: Datenlöschung &amp; Website-Recht</h3>
+                            <p>Präsentiert von <strong>Gruppe G</strong> für das Modul 231 an der TBZ.</p>
+                            <p style="font-size: 0.95rem; color: var(--gold); font-weight: 500; font-style: italic; border-left: 2px solid var(--gold); padding-left: 12px; margin: 1.5rem 0;">
+                                "OK gooners do you have problems with ARJ? - Yes we do – yeyyy!!"
+                            </p>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.8;">
+                                <strong>Incident Lead:</strong> Lele<br>
+                                <strong>Legal &amp; Comm. Officer:</strong> Fala<br>
+                                <strong>Muttergesellschaft:</strong> Günther &amp; Guhner AG, Zug
+                            </p>
+                        </div>
+                        <div class="slide-visual">
+                            <svg width="220" height="220" viewBox="0 0 100 100">
+                                <polygon points="50,15 80,50 50,85 20,50" fill="none" stroke="var(--gold)" stroke-width="4"/>
+                                <circle cx="50" cy="50" r="12" fill="none" stroke="var(--gold)" stroke-width="2" class="pulse-circle"/>
+                                <text x="50" y="96" font-family="'Outfit', sans-serif" font-size="7" fill="var(--text-secondary)" text-anchor="middle">GÜNTHER &amp; GUHNER</text>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2: Der Vorfall (Incident summary & affected systems) -->
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <span class="slide-tag icon-red" style="background: rgba(244, 63, 94, 0.1);">Vorfalls-Summary</span>
+                        <span class="slide-number">Folie 2 von 8</span>
+                    </div>
+                    <div class="slide-grid">
+                        <div class="slide-text">
+                            <h3 class="slide-title">Datenbank-Crash &amp; Kritikalität</h3>
+                            <p><strong>Incident Lead Lele:</strong> Ein fehlerhaftes Skript korrumpierte die zentrale PostgreSQL-Datenbank. Das wöchentliche Backup fehlt im Backup-System (nur statische Web-Files vorhanden). Ausfall aller 9 Tochtergesellschaften.</p>
+                            <ul class="slide-list" style="font-size: 0.85rem; line-height: 1.4;">
+                                <li>
+                                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="icon-red"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+                                    <span><strong>Systeme:</strong> Ausfall von User-Wallets, Registrierungen, Wetthistorie und Compliance-Logs.</span>
+                                </li>
+                                <li>
+                                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="icon-red"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                    <span><strong>Kritikalität:</strong> Reputationsschaden (Exit-Scam Verdacht), finanzieller Ruin, Lizenzentzug (MGA/ESBK) und operativer Stillstand.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="slide-visual">
+                            <svg width="220" height="220" viewBox="0 0 100 100">
+                                <circle cx="50" cy="50" r="45" fill="none" stroke="rgba(244, 63, 94, 0.2)" stroke-width="3"/>
+                                <path d="M30,35 L70,35 C70,35 75,45 50,45 C25,45 30,35 30,35" fill="#f43f5e"/>
+                                <rect x="30" y="48" width="40" height="15" rx="3" fill="#f43f5e" opacity="0.8"/>
+                                <line x1="20" y1="20" x2="80" y2="80" stroke="#f43f5e" stroke-width="5" stroke-linecap="round"/>
+                                <line x1="80" y1="20" x2="20" y2="80" stroke="#f43f5e" stroke-width="5" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3: RPO & RTO Metriken -->
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <span class="slide-tag icon-blue" style="background: rgba(99, 102, 241, 0.1);">RPO / RTO</span>
+                        <span class="slide-number">Folie 3 von 8</span>
+                    </div>
+                    <div class="slide-grid">
+                        <div class="slide-text">
+                            <h3 class="slide-title">RPO &amp; RTO Metriken</h3>
+                            <p>Unsere RPO- und RTO-Grenzwerte wurden durch den Ausfall extrem überschritten:</p>
+                            <ul class="slide-list">
+                                <li>
+                                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="icon-blue"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                    <span><strong>RPO (Soll: Minuten):</strong> Aufgrund des Ausfalls können wir nur ein DB-Backup nutzen, das **mehrere Wochen alt** ist (massiver Datenverlust).</span>
+                                </li>
+                                <li>
+                                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="icon-blue"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                                    <span><strong>RTO (Soll: Minimal):</strong> Die Downtime ist kritisch. Wegen der manuellen Rekonstruktion aus Caches/Logs rechnen wir mit **1-2 Tagen**.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="slide-visual">
+                            <svg width="220" height="220" viewBox="0 0 100 100">
+                                <circle cx="50" cy="50" r="40" fill="none" stroke="var(--indigo)" stroke-width="3"/>
+                                <path d="M50,15 L50,50 L75,65" fill="none" stroke="var(--indigo)" stroke-width="4" stroke-linecap="round"/>
+                                <circle cx="50" cy="50" r="4" fill="#fff"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 4: Recovery Steps (1-3) -->
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <span class="slide-tag icon-gold" style="background: rgba(212, 175, 55, 0.1);">Wiederherstellung (Teil 1)</span>
+                        <span class="slide-number">Folie 4 von 8</span>
+                    </div>
+                    <div class="slide-grid">
+                        <div class="slide-text">
+                            <h3 class="slide-title">Schritte 1 bis 3 (Plan)</h3>
+                            <p><strong>Recovery Engineer:</strong> Strukturierter Wiederaufbau des Systems und Schema-Rekonstruktion:</p>
+                            <ul class="slide-list" style="font-size: 0.85rem; line-height: 1.45;">
+                                <li>
+                                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="icon-gold"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                                    <span><strong>1. Caches &amp; Devs:</strong> Versteckte Snapshots/Backups suchen. Redis-Caches &amp; PostgreSQL-Logs nach Schemadaten prüfen. Lokale DB-Kopien bei Programmierer:innen abfragen.</span>
+                                </li>
+                                <li>
+                                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="icon-gold"><path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+                                    <span><strong>2. Datenbankschema (EF):</strong> Rekonstruktion aus Backend-Code, SQL-Skripten, ERDs und dem **Entity Framework Database Context &amp; Migrations**.</span>
+                                </li>
+                                <li>
+                                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="icon-gold"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                                    <span><strong>3. Datenwiederherstellung:</strong> Caches, PostgreSQL WALs (Write-Ahead Logs) auswerten. User zur Re-Registrierung auffordern zur Profilrettung.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="slide-visual">
+                            <svg width="220" height="220" viewBox="0 0 100 100">
+                                <rect x="20" y="20" width="60" height="60" rx="6" fill="none" stroke="var(--gold)" stroke-width="3"/>
+                                <path d="M35,40 L65,40 M35,50 L65,50 M35,60 L55,60" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 5: Recovery Steps (4-6) -->
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <span class="slide-tag icon-gold" style="background: rgba(212, 175, 55, 0.1);">Wiederherstellung (Teil 2)</span>
+                        <span class="slide-number">Folie 5 von 8</span>
+                    </div>
+                    <div class="slide-grid">
+                        <div class="slide-text">
+                            <h3 class="slide-title">Schritte 4 bis 6 (Plan)</h3>
+                            <p><strong>Recovery Engineer:</strong> Finalisierung der Datenbank und Qualitätssicherung vor Inbetriebnahme:</p>
+                            <ul class="slide-list" style="font-size: 0.85rem; line-height: 1.45;">
+                                <li>
+                                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="icon-gold"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                    <span><strong>4. DB neu erstellen:</strong> Generiertes Schema erstellen, gerettete Daten einfügen, Datenintegrität auf Fremdschlüssel-Fehler prüfen.</span>
+                                </li>
+                                <li>
+                                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="icon-gold"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                    <span><strong>5. Sandbox Test:</strong> Verbindungstest der Applikation mit der neuen Datenbank in einer geschützten **Sandbox/Staging-Umgebung** vor Live-Schaltung.</span>
+                                </li>
+                                <li>
+                                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="icon-gold"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+                                    <span><strong>6. Post-Recovery:</strong> Abgleich mit dem letzten bekannten Stand (User, Kontosalden). Backup-Skripts korrigieren, <code>pg_dump</code> einrichten.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="slide-visual">
+                            <svg width="220" height="220" viewBox="0 0 100 100">
+                                <circle cx="50" cy="50" r="40" fill="none" stroke="var(--gold)" stroke-width="3" stroke-dasharray="4,4"/>
+                                <path d="M35,50 L45,60 L65,40" stroke="var(--gold)" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 6: Wiederherstellungs-Prioritäten -->
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <span class="slide-tag icon-gold" style="background: rgba(212, 175, 55, 0.1);">Prioritätenliste</span>
+                        <span class="slide-number">Folie 6 von 8</span>
+                    </div>
+                    <div class="slide-grid">
+                        <div class="slide-text">
+                            <h3 class="slide-title">System-Prioritäten</h3>
+                            <p>Unsere Wiederherstellungs-Prioritäten zur Einhaltung der Gesetze und Gewährleistung des Spielbetriebs:</p>
+                            <ol class="slide-list" style="font-size: 0.85rem; line-height: 1.45; list-style: decimal; padding-left: 20px;">
+                                <li><strong>Kontodaten:</strong> Username, Passwort, Geburtsjahr, AHV-Nr., Blutgruppe... (Für Registrierung, Login &amp; KYC-Identifikationspflicht).</li>
+                                <li style="margin-top: 5px;"><strong>Finanzdaten:</strong> Kreditkartenangaben, Banküberweisungen... (Für Abgleich &amp; Audits).</li>
+                                <li style="margin-top: 5px;"><strong>In-Game Guthaben:</strong> Letzte Slotmachine-Resultate, offene Wetten, Jackpots.</li>
+                                <li style="margin-top: 5px;"><strong>Logs &amp; Audit Trails:</strong> Für Systemüberwachung (wichtig, aber nicht kritisch für den Start).</li>
+                            </ol>
+                        </div>
+                        <div class="slide-visual">
+                            <div class="legal-card" style="padding: 1rem; background: rgba(255, 255, 255, 0.01); border-color: rgba(212, 175, 55, 0.15); width: 100%;">
+                                <h4 style="margin: 0 0 0.5rem; color: var(--gold); font-size: 1rem;">Reihenfolge</h4>
+                                <div style="display: flex; flex-direction: column; gap: 8px; font-size: 0.8rem; text-align: left;">
+                                    <div style="background: rgba(212,175,55,0.1); padding: 6px; border-left: 3px solid var(--gold);">1. Kontodaten (KYC, AHV)</div>
+                                    <div style="background: rgba(255,255,255,0.02); padding: 6px; border-left: 3px solid var(--text-secondary);">2. Finanztransaktionen</div>
+                                    <div style="background: rgba(255,255,255,0.02); padding: 6px; border-left: 3px solid var(--text-secondary);">3. Wetten &amp; Guthaben</div>
+                                    <div style="background: rgba(255,255,255,0.02); padding: 6px; border-left: 3px solid var(--text-secondary);">4. System-Logs</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 7: Krisenkommunikation (Statement & Legal) -->
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <span class="slide-tag icon-gold" style="background: rgba(245, 158, 11, 0.1);">Recht &amp; PR</span>
+                        <span class="slide-number">Folie 7 von 8</span>
+                    </div>
+                    <div class="slide-grid">
+                        <div class="slide-text">
+                            <h3 class="slide-title">Krisen-Statement &amp; AGB</h3>
+                            <p><strong>Legal Officer Fala:</strong> Veröffentlichung eines klaren Statements. Haftungsausschluss für Datenverluste und Störungen über AGB-Klauseln (Art. 100 OR):</p>
+                            <p style="font-style: italic; color: #fff; border-left: 2px solid var(--amber); padding-left: 12px; font-size: 0.85rem; line-height: 1.4; margin: 10px 0;">
+                                "Guthaben sind absolut sicher; keine Fremdeinwirkung. Auszahlungen verzögern sich um 48 Std. Bitte abwarten, Studios nutzen lokale Listen."
+                            </p>
+                            <p style="font-size: 0.85rem;">
+                                <strong>Tab-Vergleich:</strong> Schweizer BGS/UWG verlangt ESBK-Lizenz. Deutsche DDG/GlüStV verlangt LUGAS-Anbindung.
+                            </p>
+                        </div>
+                        <div class="slide-visual">
+                            <svg width="220" height="220" viewBox="0 0 100 100">
+                                <path d="M20,30 L80,30 L80,70 L45,70 L25,85 L25,70 L20,70 Z" fill="none" stroke="var(--amber)" stroke-width="3"/>
+                                <circle cx="40" cy="50" r="3" fill="#fff"/>
+                                <circle cx="50" cy="50" r="3" fill="#fff"/>
+                                <circle cx="60" cy="50" r="3" fill="#fff"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 8: Quiz & Q&A -->
+                <div class="slide-content">
+                    <div class="slide-header">
+                        <span class="slide-tag icon-green" style="background: rgba(16, 185, 129, 0.1);">Quiz &amp; Fragen</span>
+                        <span class="slide-number">Folie 8 von 8</span>
+                    </div>
+                    <div class="slide-grid">
+                        <div class="slide-text">
+                            <h3 class="slide-title">Quizfragen an die Klasse</h3>
+                            
+                            <div class="quiz-container">
+                                <div class="quiz-question">Frage 1: Wie rekonstruieren wir das Datenbankschema vollautomatisch?</div>
+                                <div class="quiz-answer"><strong>Antwort:</strong> Über die Entity Framework Migrations und den Database Context.</div>
+                                
+                                <div class="quiz-question">Frage 2: Gilt unser Gerichtsstand (Zug) uneingeschränkt für EU-Spieler?</div>
+                                <div class="quiz-answer"><strong>Antwort:</strong> Nein, im EU-Verbraucherschutzrecht gilt zwingend der Wohnsitz des Spielers. Gerichtsstandsklauseln in B2C-AGB sind dort ungültig.</div>
+                            </div>
+                        </div>
+                        <div class="slide-visual">
+                            <div style="text-align: center;">
+                                <div style="font-size: 3.5rem; margin-bottom: 0.5rem;">❓</div>
+                                <div style="font-family: 'Outfit', sans-serif; font-weight: bold; font-size: 1.5rem; color: #fff;">Q &amp; A</div>
+                                <div style="color: var(--text-secondary); font-size: 0.85rem; margin-top: 5px;">Haben Sie noch Fragen?</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide Slide Controls -->
+                <div class="slide-controls">
+                    <button id="prev-btn" class="btn-nav" disabled>Zurück</button>
+                    <div class="slide-dots">
+                        <div class="dot active"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                    <button id="next-btn" class="btn-nav">Nächster Schritt</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Details Section (Tabs: AGB/Disclaimer/Impressum & Vergleich CH vs EU) -->
+    <section id="details-sec" class="details-section">
+        <div class="tabs-container">
+            <div class="tabs-header">
+                <button class="tab-btn active" data-tab="legal">Legal &amp; Website Pack</button>
+                <button class="tab-btn" data-tab="compare">Rechtsvergleich CH vs. DE/EU</button>
+            </div>
+
+            <!-- Tab 1: Legal Pack -->
+            <div id="legal-tab" class="tab-content active">
+                <div class="legal-grid">
+                    <!-- Impressum & Disclaimer -->
+                    <div class="legal-card">
+                        <h3>Impressum (Vollständig &amp; Konform)</h3>
+                        <p><strong>Herausgeberin:</strong> Günther &amp; Guhner AG</p>
+                        <p><strong>Adresse:</strong> Poststrasse 12, 6300 Zug, Schweiz</p>
+                        <p><strong>Sitz / Rechtsform:</strong> Zug, Aktiengesellschaft (AG)</p>
+                        <p><strong>Kontakt:</strong> compliance@guenther-guhner.ch | Tel: +41 41 555 11 22</p>
+                        <p><strong>Vertretung:</strong> Femi Ogunsola (CEO &amp; Verwaltungsrat)</p>
+                        <p><strong>Aufsichtsbehörde:</strong> Eidgenössische Spielbankenkommission (ESBK), Schweiz</p>
+                        <p><strong>Konzessionsnummer:</strong> Nr. 516-123-01</p>
+                        <p><strong>Handelsregister:</strong> Kanton Zug, Firmennummer: CHE-111.222.333 MWST</p>
+                        <p><strong>Gerichtsstand:</strong> Zug, Schweiz</p>
+                        
+                        <h3 style="margin-top: 2rem;">Disclaimer</h3>
+                        <p>Die Günther &amp; Guhner AG bemüht sich um ständige Systemverfügbarkeit. Bei technischen Störungen, Ausfällen des Zufallsgenerators (RNG) oder Datenbankverlusten werden alle laufenden Spielrunden und Wetteinsätze als ungültig ("void") erklärt und die Einsätze zurückerstattet. Weitergehende Haftung wird im gesetzlich zulässigen Rahmen (Art. 100 OR) ausgeschlossen.</p>
+                    </div>
+
+                    <!-- AGB Clauses -->
+                    <div class="legal-card">
+                        <h3>AGB-Klauseln (Auszug)</h3>
+                        
+                        <h4>Klausel 1: Systemfehler &amp; Spielstornierung</h4>
+                        <p>Eine Fehlfunktion der Spielsoftware, des RNG, des Netzwerks oder der Datenbank macht alle Spielrunden und Gewinne ungültig ("Void in event of malfunction"). Der Einsatz wird dem Spielerkonto zurückerstattet. Ein Anspruch auf hypothetische Gewinne besteht nicht.</p>
+
+                        <h4>Klausel 2: Saldenprüfung &amp; Audit-Vorgaben</h4>
+                        <p>Die Browser-Anzeige des Saldos ist unverbindlich. Im Falle von Abweichungen durch Systemunterbrüche gelten ausschliesslich die auf den zentralen Backup- und Audit-Servern der Günther &amp; Guhner AG gespeicherten Rohdaten.</p>
+
+                        <h4>Klausel 3: Spielerschutz &amp; 2FA</h4>
+                        <p>Der Spieler ist für die Geheimhaltung seiner Zugangsdaten verantwortlich. Zur Absicherung des Kontos wird die Nutzung der Zwei-Faktor-Authentisierung (2FA) dringend verlangt. Die MoneyMaker AG behält sich vor, Konten bei Verdacht auf Fremdnutzung temporär zu sperren.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 2: Comparison -->
+            <div id="compare-tab" class="tab-content">
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Thema</th>
+                                <th>Schweiz (BGS / DSG / OR)</th>
+                                <th>Deutschland / EU (GlüStV / BGB)</th>
+                                <th>Bedeutung für unseren Fall</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Impressumspflicht</strong></td>
+                                <td>Art. 3 Abs. 1 lit. s UWG. Zwingende Angabe der ESBK-Konzessionsnummer.</td>
+                                <td>Streng nach § 5 DDG (ehemals TMG) sowie Auflagen des GlüStV.</td>
+                                <td>Die deutsche Tochter <code>GibGeld.de</code> muss zwingend ein GlüStV-konformes Impressum aufweisen, um teure Abmahnungen zu vermeiden.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Haftung &amp; Disclaimer</strong></td>
+                                <td>Ausschluss für leichte und mittlere Fahrlässigkeit nach Art. 100 OR zulässig.</td>
+                                <td>Strikte Klauselkontrolle nach § 307 BGB. Ausschluss bei vertragswesentlichen Pflichten ungültig.</td>
+                                <td>Unsere "Void-Klausel" ist für Schweizer Kunden auf <code>Trallalero-Dollarla.ch</code> rechtssicher. In Deutschland müssen wir den Rückerhalt des Einsatzes vertraglich garantieren.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Gerichtsstand</strong></td>
+                                <td>Frei wählbar für B2B (Zug). Verbrauchergerichtsstand unter Einschränkungen vertraglich regelbar.</td>
+                                <td>Gerichtsstandsklauseln gegen Verbraucher (B2C) sind in der EU ungültig. Es gilt der Wohnsitz des Spielers.</td>
+                                <td>Wegen der regulatorischen Risiken sperren wir EU-Spieler auf Schweizer Portalen und fokussieren uns für B2C-Kunden auf den inländischen Gerichtsstand Zug.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Public Statement Section -->
+    <section id="statement-sec" style="padding: 4rem 5% 6rem; background: #0a0b10;">
+        <h2 class="section-title" style="margin-bottom: 3rem;">Öffentliches Statement</h2>
+        <div class="statement-box">
+            <p class="statement-quote">
+                "Aufgrund einer technischen Störung unserer Datenbankinfrastruktur sind die Webseiten unserer Plattformen (u.a. MoneyMaker.com, CashGrabber.net, GibGeld.de, Trallalero-Dollarla.ch) vorübergehend nicht erreichbar. Wir versichern Ihnen, dass Ihre Guthaben und persönlichen Daten absolut sicher sind. Es liegt kein Hackerangriff oder unbefugter Zugriff von aussen vor. Alle Echtgeldkonten werden derzeit in Zusammenarbeit mit den Zahlungsdienstleistern lückenlos verifiziert und wiederhergestellt. Beantragte Auszahlungen verzögern sich um bis zu 48 Stunden. Sie müssen nicht aktiv werden. Wir informieren Sie stündlich."
+            </p>
+            <div class="statement-footer">
+                <span>Im Namen des Verwaltungsrates</span>
+                <span class="statement-sign">Femi Ogunsola, CEO</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Günther &amp; Guhner AG, Zug. Alle Rechte vorbehalten. Lizenziert durch die Eidgenössische Spielbankenkommission (ESBK).</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

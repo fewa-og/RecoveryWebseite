@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinero-Dinero.mx - Casino, Bingo y Tragamonedas</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Lilita+One&display=swap');
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+            font-family: 'Lilita One', cursive;
+            margin: 0;
+            padding: 0;
+            background-image: radial-gradient(circle at top, #7c2d12 0%, #0f172a 70%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header {
+            text-align: center;
+            padding: 3rem 1rem 1rem;
+        }
+        svg {
+            width: 100px;
+            height: 100px;
+            filter: drop-shadow(0 4px 10px rgba(249, 115, 22, 0.4));
+        }
+        h1 {
+            font-size: 3rem;
+            color: #f97316;
+            margin: 1rem 0 0.5rem;
+            text-shadow: 0 4px 0px #7c2d12, 0 0 10px rgba(249, 115, 22, 0.5);
+            letter-spacing: 1px;
+        }
+        .tagline {
+            color: #10b981;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 0.85rem;
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+        .main-container {
+            max-width: 900px;
+            width: 90%;
+            background: rgba(15, 23, 42, 0.9);
+            border: 3px solid #10b981;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+            border-radius: 24px;
+            padding: 2.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+        .bingo-board {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            max-width: 400px;
+            margin: 1.5rem auto 2.5rem;
+            background: #1e293b;
+            padding: 15px;
+            border-radius: 16px;
+            border: 2px solid #f97316;
+        }
+        .bingo-ball {
+            background: #fff;
+            color: #0f172a;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin: 0 auto;
+            border: 2px solid #e2e8f0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .bingo-ball:hover {
+            background: #10b981;
+            color: #fff;
+        }
+        .btn-back {
+            background: #f97316;
+            color: #ffffff;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-size: 1rem;
+            text-decoration: none;
+            cursor: pointer;
+            transition: transform 0.2s, background 0.2s;
+            display: inline-block;
+            box-shadow: 0 4px 10px rgba(249, 115, 22, 0.4);
+        }
+        .btn-back:hover {
+            background: #ea580c;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="23" fill="#f97316"/>
+            <path d="M50,10 L50,20 M50,80 L50,90 M10,50 L20,50 M80,50 L90,50" stroke="#eab308" stroke-width="4" stroke-linecap="round"/>
+            <rect x="38" y="38" width="24" height="24" rx="4" fill="#fff" stroke="#10b981" stroke-width="2"/>
+            <circle cx="45" cy="45" r="3" fill="#ef4444"/>
+            <circle cx="55" cy="55" r="3" fill="#ef4444"/>
+        </svg>
+        <h1>Dinero Dinero</h1>
+        <div class="tagline">¡El Gran Casino y Bingo de México!</div>
+    </header>
+
+    <div class="main-container">
+        <h2 style="color: #fff; font-size: 1.5rem; margin-bottom: 1.5rem;">Cartón de Bingo Activo</h2>
+        
+        <div class="bingo-board">
+            <div class="bingo-ball">12</div>
+            <div class="bingo-ball">24</div>
+            <div class="bingo-ball">37</div>
+            <div class="bingo-ball">48</div>
+            <div class="bingo-ball">60</div>
+            <div class="bingo-ball">8</div>
+            <div class="bingo-ball">19</div>
+            <div class="bingo-ball" style="background: #10b981; color: #fff;">FREE</div>
+            <div class="bingo-ball">53</div>
+            <div class="bingo-ball">71</div>
+        </div>
+
+        <a href="index.html" class="btn-back">Regresar al Portal</a>
+    </div>
+</body>
+</html>
